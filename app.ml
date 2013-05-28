@@ -1,7 +1,8 @@
 let f ic oc =
+  begin try while let s = input_line ic in s <> "\r" && s <> "" do () done with _ -> () end;
   let () = Random.self_init () in
   let n = Random.int 1000 in
-  Printf.printf "starged %d!\n%!" n;
+  Printf.printf "started %d!\n%!" n;
   let resps = 
     [ "HTTP/1.1 200 OK\r\n";
       "Content-Type: text/plain\r\n";
