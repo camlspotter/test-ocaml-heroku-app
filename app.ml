@@ -1,9 +1,9 @@
 let f _ic oc =
   List.iter (output_string oc)
-    [ "HTTP/1.1 200 OK\n";
-      "Content-Type: text/plain\n";
+    [ "HTTP/1.1 200 OK\r\n";
+      "Content-Type: text/plain\r\n";
       "\n";
-      "hello heroku ocaml app!\n"
+      "hello heroku ocaml app!\r\n"
     ]
 
 let port =
