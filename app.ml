@@ -7,7 +7,8 @@ let f _ic oc =
     ]
   in
   List.iter (output_string oc) resps;
-  flush oc
+  flush oc;
+  print_endline "written!"
 
 let port =
   let port = ref None in
