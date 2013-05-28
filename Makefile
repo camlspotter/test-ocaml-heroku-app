@@ -1,7 +1,7 @@
 all: app
 
 app: app.ml
-	ocamlopt -o $@ app.ml
+	ocamlopt -o $@ unix.cmxa app.ml
 
 clean:
 	rm app app.cm*
