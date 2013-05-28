@@ -1,10 +1,13 @@
 let f _ic oc =
-  List.iter (output_string oc)
+  let resps = 
     [ "HTTP/1.1 200 OK\r\n";
       "Content-Type: text/plain\r\n";
       "\n";
       "hello heroku ocaml app!\r\n"
     ]
+  in
+  List.iter print_string resps;
+  List.iter (output_string oc) resps
 
 let port =
   let port = ref None in
