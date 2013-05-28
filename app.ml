@@ -1,15 +1,15 @@
 let f ic oc =
+  let n = Random.int 1000 in
   let resps = 
     [ "HTTP/1.1 200 OK\r\n";
       "Content-Type: text/plain\r\n";
       "\r\n";
-      "hello heroku ocaml app!\r\n"
+      Printf.sprintf "hello heroku ocaml app! %d\r\n" n
     ]
   in
-  close_in ic;
   List.iter (output_string oc) resps;
   flush oc;
-  print_endline "written!"
+  Printf.printf "written %d!\n%!" n
 
 let port =
   let port = ref None in
