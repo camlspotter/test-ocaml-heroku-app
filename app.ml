@@ -1,4 +1,5 @@
 let f ic oc =
+  let () = Random.self_init () in
   let n = Random.int 1000 in
   let resps = 
     [ "HTTP/1.1 200 OK\r\n";
