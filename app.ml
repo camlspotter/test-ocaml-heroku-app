@@ -6,8 +6,8 @@ let f _ic oc =
       "hello heroku ocaml app!\r\n"
     ]
   in
-  List.iter print_string resps;
-  List.iter (output_string oc) resps
+  List.iter (output_string oc) resps;
+  flush oc
 
 let port =
   let port = ref None in
