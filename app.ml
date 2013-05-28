@@ -1,6 +1,7 @@
 let f ic oc =
   let () = Random.self_init () in
   let n = Random.int 1000 in
+  Printf.printf "starged %d!\n%!" n;
   let resps = 
     [ "HTTP/1.1 200 OK\r\n";
       "Content-Type: text/plain\r\n";
