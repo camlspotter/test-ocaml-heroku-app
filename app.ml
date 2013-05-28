@@ -1,4 +1,4 @@
-let f _ic oc =
+let f ic oc =
   let resps = 
     [ "HTTP/1.1 200 OK\r\n";
       "Content-Type: text/plain\r\n";
@@ -6,6 +6,7 @@ let f _ic oc =
       "hello heroku ocaml app!\r\n"
     ]
   in
+  close_in ic;
   List.iter (output_string oc) resps;
   flush oc;
   print_endline "written!"
