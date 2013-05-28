@@ -2,7 +2,7 @@ let f _ic oc =
   let resps = 
     [ "HTTP/1.1 200 OK\r\n";
       "Content-Type: text/plain\r\n";
-      "\n";
+      "\r\n";
       "hello heroku ocaml app!\r\n"
     ]
   in
